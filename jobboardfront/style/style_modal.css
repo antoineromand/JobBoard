@@ -1,0 +1,67 @@
+.modalSignUp > * {
+    padding: 0;
+    margin: 0;
+    box-sizing:  border-box;
+}
+.modalSignUp{
+    background: rgb(219, 226, 226)
+}
+
+.modalSignUp img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.connectezVous{
+    color: #4C5270;
+}
+
+.btn1{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: #489cd8; /* black */
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.btn1:hover{
+    background-color: white;
+    border: 1px solid #489cd8;
+    color: #489cd8;
+}
+
+@media screen and (max-width: 991px) {
+    .logo1{
+        display: none;
+    }
+    .logo3{
+        display: none;
+    }
+    .logo2{
+        /* padding: 0px 20px 0px 20px; */
+        height: 80%;
+    }
+  }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+.logo2{
+    display: none;
+}
+.logo3{
+    display: none;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    .logo1{
+        display: none;
+    }
+    .logo2{
+        display: none;
+    }
+    .container_modal{
+        padding-left: 100px;
+    }
+}

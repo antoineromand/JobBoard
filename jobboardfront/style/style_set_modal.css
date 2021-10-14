@@ -1,0 +1,48 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+.wrapper {
+    /* padding: -20px 50px;
+    margin: -20px auto; */
+    margin: auto;
+    max-width: 600px
+}
+
+#img-section p,
+#desactivate p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+    text-align: justify
+}
+
+.modalRegister label {
+    color: #777;
+    padding-left: 3px;
+}
+
+.modalRegister .ml-auto{
+    marging-left: 10px;
+}
+
+.modalRegister input[placeholder] {
+    font-weight: 500
+}
+
+.modalRegister .form-control:focus {
+    box-shadow: none;
+    border: 1.5px solid #0779e4
+}
+
+.button:hover {
+    background-color: gainsboro;
+}
+
+@media(max-width:576px) {
+    .wrapper {
+        padding: 25px 20px
+    }
+
+    #desactivate {
+        line-height: 18px
+    }
+}

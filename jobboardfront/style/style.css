@@ -1,0 +1,287 @@
+.logo{
+    width: 150px;
+    padding-left: 15%;
+}
+
+nav {
+    background-color: white!important;
+    width: 100%;
+}
+
+body {
+    background-color: #F3F2EF!important;
+}
+
+nav a{
+    text-decoration:none!important;
+    color: black!important;
+    line-height: 5px;
+}
+
+.nav-item {
+    margin: 1.5%;
+}
+
+.card {
+    margin-top:3%;
+    width: 100%;
+}
+.card-link {
+    margin-left: 0!important;
+}
+.post .sav .red {
+    margin-right: 150px;
+}
+#down {
+    font-size: 2em;
+    cursor: pointer;
+}
+#up {
+    font-size: 2em;
+    cursor: pointer;
+}
+.more {
+    display: none;
+}
+#down:hover {
+    font-size: 2.2em;
+}
+#up:hover {
+    font-size: 2.2em;
+}
+
+select {
+    border: none;
+    outline: none;
+}
+
+ul{
+    margin-right: 4%;
+}
+
+#connexion {
+    color: white!important;
+    margin-left: 5px;
+}
+
+#adjob {
+    background-color: #58b2a4!important;
+    color: white!important;
+    border: none;
+}
+
+#filterbar select {
+    border-radius: 10px;
+    padding: 1%;
+    color: black!important;
+    background-color: #F5F5F5!important;
+}
+#filterbar #secteurfiltre {
+    width: 24%;
+}
+#filterbar #villefiltre {
+    width: 18%;
+}
+#cardfilter {
+    background-color: #489cd8!important;
+    border: none;
+    box-shadow:5px 5px 8px 3px rgba(51,51,51,0.25);
+}
+
+.poste {
+    color: #0869af;
+}
+.cardad {
+    box-shadow:5px 5px 8px 3px rgba(51,51,51,0.25);
+}
+
+.log{
+    width: 58%;
+}
+.err{
+    width: 58%;
+}
+
+#reloadbtn {
+    color: black!important;
+    background-color: #F5F5F5!important;
+    border: none;
+    border-radius: 10px;
+    transition: all ease 0.5s;
+}
+#reloadbtn:hover{
+    color: #F5F5F5!important;
+    background-color: #393D3F!important;
+}
+
+#filtrebtn{
+    background-color: #F5F5F5!important;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    transition: all ease 0.5s;
+}
+
+#filtrebtn:hover {
+    background-color: #393D3F!important;
+    color: #F5F5F5!important;
+}
+
+.desc_un {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.desc_deux {
+    text-align: justify;
+}
+
+#modifrequest, #close, #modifrequestcp, #closecp {
+    width: 49%;
+}
+.card-header i {
+    margin-right: 2%!important;
+}
+.info_perso input {
+    margin-bottom: 3%;
+}
+
+#cardmodif input, #modifpass {
+    margin-bottom: 3%;
+}
+
+.date > i, .ville > i, .secteur >i, .salaire >i {
+    margin-right: 2%;
+}
+nav li {
+    margin: auto!important;
+}
+#monespace {
+    margin-right: 5px!important;
+}
+form #passmodif {
+    width: 80%;
+}
+form #modifpass {
+    margin-left: 2%!important;
+}
+.menu a {
+    border: #333 solid 1px;
+    border-bottom: none;
+    border-radius: 15% 15% 0% 0%;
+    padding: 0.2%;
+}
+
+.menu a:hover {
+    background-color: #bbb;
+    transition: ease 0.5s;
+}
+.menu {
+    border: #333 solid 1px;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    width: 100%;
+}
+
+table label {
+    display: inline-flex;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.test{
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+    box-shadow: 11px 4px 16px 3px rgba(176, 134, 134, 0.41);
+    background-color: white;
+}
+
+#prenom {
+    margin-right: 5%!important;
+}
+
+
+
+@media (max-width:991px) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    li{
+        width: 20%;
+    }
+    #connexion {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+    #filterbar {
+        flex-direction: column;
+    }
+    #filterbar > * {
+        margin-top: 15px;
+    }
+   
+
+}
+
+@media (max-width: 1200px) {
+    #filterbar {
+        flex-direction: column;
+    }
+    #filterbar > * {
+        margin-top: 15px;
+    }
+    #filterbar #secteurfiltre {
+        width: 100%;
+    }
+    #filterbar #villefiltre {
+        width: 100%;
+    }
+}
+ 
+@media (max-width: 475px) {
+    
+    .logo {
+        padding-left: 5%;
+    }
+    /* .container_modal input{
+        width: 300px;
+    } */
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .premiereAnnonce{
+        margin-top: -0.35em;
+    }
+}
+
+@media (min-width: 992px) {
+    .premiereAnnonce{
+        margin-top: -0.9em;
+    }
+}
+
+@media (min-width: 1400px){
+    .premiereAnnonce{
+        margin-top : -1.1em;
+    }
+}
+
+@media (max-width: 475px) {
+    .logo1{
+        display: none;
+    }
+    /* .logo2{
+        display: none;
+    } */
+    .logo3{
+        display: none;
+    }
+}
+
+.messageChomeur{
+    resize : none;
+    height: 120px;    
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e908b205ad.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_modal.css">
+    <link rel="stylesheet" href="style/style_set_modal.css">
+    <link rel="icon" type="image/png" href="img/unknown.png">
+    <title>AlloJob</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logoAlloJob.png" class="logo" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navtoggle"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navtoggle">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active d-flex align-items-center flex-column">
+                        <i class="fas fa-home"></i>
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center flex-column">
+                        <i class="fas fa-user" id="logoespace"></i>
+                        <a class="nav-link" id="monespace" href="monespace.html">Mon Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success" id="adjob" href="#" data-bs-toggle="modal"
+                            data-bs-target="#annonceJob">Annonce <i class="fas fa-plus-circle"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark" id="connexion" href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalSignUp">Login </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-1 col-lg-1 col-xl-2"></div>
+            <div class="col-md-10 col-lg-10 col-xl-8 ">
+                <div class="card p-3" id="cardfilter">
+                    <form class="d-flex justify-content-between" id="filterbar">
+                        <select name="secteurfiltre" id="secteurfiltre">
+                            <option value="" selected>Secteur d'activité</option>
+                            <option value="1">Informatique / Télécoms</option>
+                            <option value="2">Agroalimentaire</option>
+                            <option value="3">Banque / Assurance</option>
+                            <option value="4">Chimie / Parachimie</option>
+                            <option value="5">Études et conseils</option>
+                            <option value="6">Métallurgie / Travail du métal</option>
+                            <option value="7">Transports / Logistique</option>
+                            <option value="9">Textile / Habillement / Chaussure</option>
+                            <option value="10">Plastique / Caoutchouc</option>
+                            <option value="11">Machines et équipements / Automobile</option>
+                            <option value="12">BTP / Matériaux de construction</option>
+                            <option value="13">Bois / Papier / Carton / Imprimerie</option>
+                            <option value="14">Édition / Communication / Multimédia</option>
+                            <option value="15">Électronique / Électricité</option>
+                            <option value="16">Industrie pharmaceutique</option>
+                            <option value="17">Services aux entreprises</option>
+                            <option value="18">Commerce / Négoce / Distribution</option>
+                        </select>
+                        <select name="contratfiltre" id="contratfiltre">
+                            <option value="" selected>Type de contrat</option>
+                            <option value="CDI">CDI</option>
+                            <option value="CDD">CDD</option>
+                            <option value="ALTERNANCE">Alternance</option>
+                            <option value="STAGE">Stage</option>
+                        </select>
+                        <select name="villefiltre" id="villefiltre">
+                            <option value="" selected>Localisation</option>
+                            <option value="1">Paris</option>
+                            <option value="2">Marseille</option>
+                            <option value="3">Lyon</option>
+                            <option value="4">Toulouse</option>
+                            <option value="5">Nice</option>
+                            <option value="6">Nantes</option>
+                            <option value="7">Strasbourg</option>
+                            <option value="8">Montpellier</option>
+                            <option value="9">Bordeaux</option>
+                            <option value="10">Lille</option>
+                            <option value="11">Rennes</option>
+                            <option value="12">Reims</option>
+                            <option value="13">Le Havre</option>
+                            <option value="14">Saint-Étienne</option>
+                            <option value="15">Toulon</option>
+                            <option value="16">Grenoble</option>
+                            <option value="17">Dijon</option>
+                            <option value="18">Angers</option>
+                            <option value="19">Nîmes</option>
+                            <option value="20">Villeurbanne</option>
+                            <option value="21">Saint-Denis</option>
+                            <option value="22">Le Mans</option>
+                            <option value="23">Clermont-Ferrand</option>
+                            <option value="24">Aix-en-Provence</option>
+                            <option value="25">Brest</option>
+                        </select>
+                        <button class="btn" id="reloadbtn">Reinistialiser</button>
+                        <button class="btn" id="filtrebtn">Filtrer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xl-2"></div>
+
+            
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-lg-1 col-xl-2"></div>
+            <div class="col-12 col-md-10 col-lg-10 col-xl-8">
+                <div class="cardlisttotal">
+                    <div class="d-flex flex-wrap justify-content-between" id="cardlist">
+                    </div>
+                </div>
+                <div class="text-center align-items-center">
+                    <i class="fas fa-sort-down" id="down"></i>
+                    <i class="fas fa-sort-up mt-2" id="up"></i>
+                </div>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xl-2">
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <section class="p-4">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>AlloJob
+                        </h6>
+                        <p>
+                            Vous recherchez des opportunités dans votre vie professionnelle ou juste un emploi ? AlloJob
+                            est là pour vous.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            TECHNOLOGIES
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">HTML/CSS</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">JQUERY</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">MySQL</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Python</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-globe me-3"></i><a class="text-black-50" href="https://antoineromand.tech/">
+                                <u>antoineromand.tech</u></a></p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            antoineromand04@gmail.com
+                        </p>
+                        <p><i class="fas fa-globe me-3"></i><a class="text-black-50"
+                                href="https://www.matteoeleouet.webou.net/">
+                                <u>matteoeleouet.net</u></a></p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            eleouet.matteo@gmail.com
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            Développé par Mattéo Eleouet le photoshopé et Antoine Romand
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- ============================= MODAL ADD APPLICATION ============================-->
+
+    <div class="modal fade" id="annonceJob" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Poster une annonce</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container-fluid">
+                    <form id="publishnewjob">
+                        <div class="form-group row ms-5 me-5">
+                            <label for="nameCompany" class="col-md-2 col-form-label">
+                                <h5>Nom de l'entreprise</h5>
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="nameCompany"
+                                    placeholder="Votre société (par exemple : AlloJob)" readonly="readonly">
+                            </div>
+                        </div>
+
+                        <br>
+                        <hr><br>
+
+                        <div class="form-group row ms-5 me-5">
+                            <label for="posteName" class="col-md-2 col-form-label">
+                                <h5>Poste</h5>
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="posteName">
+                            </div>
+                        </div>
+
+                        <br>
+                        <hr><br>
+
+                        <div class="form-group row ms-5 me-5">
+                            <label for="email" class="col-12 col-md-2 col-form-label">
+                                <h5>Localisation</h5>
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <select class="form-select" size="5" aria-label="size 5 select example" id="ville_post">
+                                    <option selected>France</option>
+                                    <option value="1">Paris</option>
+                                    <option value="2">Marseille</option>
+                                    <option value="3">Lyon</option>
+                                    <option value="4">Toulouse</option>
+                                    <option value="5">Nice</option>
+                                    <option value="6">Nantes</option>
+                                    <option value="7">Strasbourg</option>
+                                    <option value="8">Montpellier</option>
+                                    <option value="9">Bordeaux</option>
+                                    <option value="10">Lille</option>
+                                    <option value="11">Rennes</option>
+                                    <option value="12">Reims</option>
+                                    <option value="13">Le Havre</option>
+                                    <option value="14">Saint-Étienne</option>
+                                    <option value="15">Toulon</option>
+                                    <option value="16">Grenoble</option>
+                                    <option value="17">Dijon</option>
+                                    <option value="18">Angers</option>
+                                    <option value="19">Nîmes</option>
+                                    <option value="20">Villeurbanne</option>
+                                    <option value="21">Saint-Denis</option>
+                                    <option value="22">Le Mans</option>
+                                    <option value="23">Clermont-Ferrand</option>
+                                    <option value="24">Aix-en-Provence</option>
+                                    <option value="25">Brest</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <br>
+                        <hr><br>
+
+                        <div class="form-group row ms-5 me-5">
+                            <label for="email" class="col-md-2 col-form-label">
+                                <h5>Secteur d'activité</h5>
+                            </label>
+                            <div class="col-md-10">
+                                <select class="form-select" size="5" aria-label="size 5 select example"
+                                    id="secteur_post">
+                                    <option selected>Autre</option>
+                                    <option value="1">Informatique / Télécoms</option>
+                                    <option value="2">Agroalimentaire</option>
+                                    <option value="3">Banque / Assurance</option>
+                                    <option value="4">Chimie / Parachimie</option>
+                                    <option value="5">Études et conseils</option>
+                                    <option value="6">Métallurgie / Travail du métal</option>
+                                    <option value="7">Transports / Logistique</option>
+                                    <option value="9">Textile / Habillement / Chaussure</option>
+                                    <option value="10">Plastique / Caoutchouc</option>
+                                    <option value="11">Machines et équipements / Automobile</option>
+                                    <option value="12">BTP / Matériaux de construction</option>
+                                    <option value="13">Bois / Papier / Carton / Imprimerie</option>
+                                    <option value="14">Édition / Communication / Multimédia</option>
+                                    <option value="15">Électronique / Électricité</option>
+                                    <option value="16">Industrie pharmaceutique</option>
+                                    <option value="17">Services aux entreprises</option>
+                                    <option value="18">Commerce / Négoce / Distribution</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <br>
+                        <hr><br>
+
+                        <div class="form-group row ms-5 me-5">
+                            <label for="email" class="col-md-2 col-form-label">
+                                <h5>Type de contrat</h5>
+                            </label>
+                            <div class="col-md-10">
+                                <select class="form-select" size="3" aria-label="size 3 select example"
+                                    id="contrat_post">
+                                    <option selected>Autre</option>
+                                    <option value="CDI">CDI</option>
+                                    <option value="CDD">CDD</option>
+                                    <option value="ALTERNANCE">Alternance</option>
+                                    <option value="STAGE">Stage</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <br>
+                        <hr><br>
+
+                        <!-- <div class="form-group row ms-5 me-5">
+                    <label for="email" class="col-md-2 col-form-label"><h5>Années d'expériences professionnelles </h5></label>
+                    <div class="col-md-10">
+                        <select class="form-select" size="3" aria-label="size 3 select example">
+                            <option value ="0" selected>Non précisé</option>
+                            <option value="1">Premier emploi</option>
+                            <option value="2">1 an</option>
+                            <option value="3">3 ans</option>
+                            <option value="4">5 ans ou plus</option>
+                          </select>                  
+                    </div>
+                </div> -->
+
+                        <br>
+                        <hr><br>
+
+                        <div class="form-group row ms-5 me-5">
+                            <label for="salary" class="col-md-2 col-form-label">
+                                <h5>Salaire</h5>
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="salary" placeholder="par exemple 28K">
+                            </div>
+                        </div>
+
+                        <br>
+                        <hr><br>
+
+                        <div class="form-group row ms-5 me-5">
+                            <label for="message_recruteur" class="col-md-2 col-form-label">
+                                <h5>Message</h5>
+                            </label>
+                            <div class="col-md-10">
+                                <textarea class="form-control messageRecruteur" id="message_recruteur"
+                                    placeholder="La description de votre emploi" rows="8"></textarea>
+                            </div>
+                        </div>
+                        <!-- <br><hr> -->
+                        <br>
+                        <!-- 
+                <div class="form-group row ms-5 me-5">
+                    <label for="cv" class="col-md-2 col-form-label"><h5>CV</h5></label>
+                    <div class="col-md-6">
+                        <input class="input-file form-control form-control-lg" type="file" name="cv" id="file">
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-md-2">.</div>
+                    <div class=" col-md-auto ms-5 me-5 text-black-50">
+                        Téléchargez votre CV ou tout autre fichier pertinent. Taille maximale du fichier : 5 Mo
+                    </div> 
+                </div>
+                <hr> -->
+                        <br>
+                        <button type="button" class="btn btn-primary btn-lg ms-5 me-5" id="publish">Publier
+                            l'annonce</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ============================= MODAL LOGIN  ==================================== -->
+    <div class="modalSignUp">
+        <div class="modal fade" id="modalSignUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <section class="Form my-4 mx-0 sectionForm">
+                            <div class="container container_modal">
+                                <div class="row g-0">
+                                    <div class="col-lg-5 text-center mt-4">
+                                        <img src="img/logo1.png" class="img-fluid logo1">
+                                        <!-- <div class="d-flex justify-content-center">...</div> -->
+                                        <img src="img/logo2.png" class="img-fluid center-block logo2">
+                                        <img src="img/logo3.png" class="img-fluid logo3">
+                                    </div>
+                                    <div class="col-lg-7 px-5 grand_form">
+                                        <!-- <h1 class="font-weight-bold py-3">AlloJob</h1> -->
+                                        <!-- <img src="img/logo2.png" class="img-fluid w-50 mb-4"> -->
+                                        <h4 class="pb-2 pt-5 connectezVous">Connectez-vous</h4>
+                                        <form id="formlogin">
+                                            <div class="form-row">
+                                                <div class=" col-12 col-sm 12 col-lg-11 col-xl-7">
+                                                    <input type="email" id="emaillog" name="emaillog"
+                                                        class="form-control my-3 p-2" placeholder="Votre adresse email">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-12 col-sm-12 col-lg-11 col-xl-7">
+                                                    <input type="password" id="password" name="password"
+                                                        class="form-control my-3" placeholder="********">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-12 col-sm-12 col-lg-11 col-xl-7">
+                                                    <button type="button" class="btn1 mt-2 mb-3"
+                                                        id="login">Connexion</button>
+                                                </div>
+                                            </div>
+                                            <p class="pb-5">Pas encore inscrit ? <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modalRegister" data-bs-dismiss="modal"
+                                                    aria-label="Close">Inscrivez-vous</a></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========================== INSCRIPTION MODAL ===================================== -->
+    <div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <section class="Form my-4 mx-0 sectionForm">
+                        <div class="container">
+                            <div class="row g-0">
+                                <div class="col-lg-5 text-center mt-4">
+                                    <img src="img/logo1.png" class="img-fluid logo1">
+                                    <!-- <div class="d-flex justify-content-center">...</div> -->
+                                    <img src="img/logo2.png" class="img-fluid logo2">
+                                    <img src="img/logo3.png" class="img-fluid logo3">
+                                </div>
+                                <div class="col-lg-7 px-5">
+                                    <!-- <h1 class="font-weight-bold py-3">AlloJob</h1> -->
+                                    <!-- <img src="img/logo2.png" class="img-fluid w-50 mb-4"> -->
+                                    <h4 class="pb-2 pt-5 connectezVous">Inscrivez-vous</h4>
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <input type="text" class="form-control my-3 p-2" id="prenom"
+                                                    name="prenom" placeholder="Votre prénom">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <input type="text" id="nom" name="nom" class="form-control my-3 p-2"
+                                                    placeholder="Votre nom">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <input type="email" id="email" name="email"
+                                                    class="form-control my-3 p-2" placeholder="Votre adresse email">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <input type="password" id="password1" name="password1"
+                                                    class="form-control my-3" placeholder="********">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <input type="password" id="password2" name="password2"
+                                                    class="form-control my-3" placeholder="********">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <input type="tel" class="form-control my-3 p-2" id="phone" name="phone"
+                                                    placeholder="Votre numéro de téléphone">
+                                            </div>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="0"
+                                                name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Je suis un chercheur d'emploi
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" value="1" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Je suis un recruteur
+                                            </label>
+                                        </div>
+                                        <div class="recruteur">
+                                            <div class="form-row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <input type="text" id="nomEntreprise" name="nomEntreprise"
+                                                        class="form-control my-3 p-2"
+                                                        placeholder="Le nom de votre entereprise">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <input type="text" id="secteur" name="secteur"
+                                                        class="form-control my-3"
+                                                        placeholder="Le secteur de votre entreprise">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <input type="text" id="ville" name="ville" class="form-control my-3"
+                                                        placeholder="La ville où se situe votre entreprise">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <textarea type="text" id="description" name="description"
+                                                        class="form-control my-3"
+                                                        placeholder="Décrivez votre entreprise" rows="8"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <input type="text" class="form-control my-3 p-2" id="site_web"
+                                                        name="site_web" placeholder="Le site web de votre entreprise">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-8 col-md-12">
+                                                <button type="button" id="register"
+                                                    class="btn1 mt-2 mb-3">Inscription</button>
+                                            </div>
+                                        </div>
+                                        <p class="pb-5">Déjà inscrit ? <a href="#" data-bs-toggle="modal"
+                                                data-bs-target="#modalSignUp" data-bs-dismiss="modal"
+                                                aria-label="Close">Connectez-vous</a></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========================================= MODAL EN HAUT ======================================= -->
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/authentification.js"></script>
+    <script src="js/filter.js"></script>
+
+
+</body>
+
+</html>

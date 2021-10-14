@@ -1,0 +1,22 @@
+.card{
+    background: white;
+    border-radius: 10px;;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.35);
+}
+
+.btn_edit {
+    color: white!important;
+    background-color: #489cd8!important;
+}
+.btn_close{
+    color: white!important;
+    background-color: #e73273!important;
+}
+.btn_change{
+    color: white!important;
+    background-color: #58b2a4!important;
+}
+
+.info_entreprises input, #companymodif input {
+    margin-bottom: 3%;
+}
